@@ -1,0 +1,44 @@
+
+=== INO2 Single-Choice Distribution ===
+
+1    38.84
+2    38.63
+4    13.63
+3     6.65
+5     2.25
+
+=== COM1 Selection Frequency ===
+
+Option  Selection %
+COM1_1        52.58
+COM1_2         0.00
+COM1_3        15.99
+COM1_4        25.00
+COM1_5        39.70
+COM1_6        35.09
+COM1_7        11.48
+
+Selections per respondent:
+1    55.04%
+2    22.53%
+3     8.05%
+4     4.72%
+6     4.51%
+0     3.22%
+5     1.93%
+
+=== OUT2 Selection Frequency ===
+
+Option  Selection %
+OUT2_1        55.90
+OUT2_2        35.52
+OUT2_3        59.76
+OUT2_4        51.39
+OUT2_5         0.00
+
+Selections per respondent:
+1     42.6%
+4    26.39%
+2     13.2%
+3     9.33%
+0     8.48%
