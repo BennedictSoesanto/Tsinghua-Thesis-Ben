@@ -1,0 +1,11 @@
+Categorical Question Analysis
+========================================
+
+Item Code: IMP2
+Category Distribution:
+  1: 34.44%
+  2: 26.07%
+  3: 21.57%
+  4: 17.92%
+Most Selected: 1 (34.44%)
+Least Selected: 4 (17.92%)

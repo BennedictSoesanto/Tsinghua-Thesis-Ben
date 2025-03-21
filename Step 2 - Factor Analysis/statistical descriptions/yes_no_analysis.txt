@@ -1,0 +1,6 @@
+Yes/No Question Analysis
+========================================
+
+Item Code: SRI3
+Yes: 45.92% (428 responses)
+No: 54.08% (504 responses)

@@ -112,3 +112,53 @@ with open(output_file, "w") as f:
         f.write(selection_dist.to_string() + "\n")
     
 print(f"Results saved to {output_file}")
+
+# Yes/No Questions
+yes_no_questions = ["SRI3"]  # Add more if necessary
+
+yes_no_output = ["Yes/No Question Analysis\n" + "="*40]
+
+for col in yes_no_questions:
+    if col in df.columns:
+        yes_count = (df[col] == 1).sum()
+        no_count = (df[col] == 0).sum()
+        total_responses = yes_count + no_count
+
+        yes_percentage = (yes_count / total_responses) * 100 if total_responses > 0 else 0
+        no_percentage = (no_count / total_responses) * 100 if total_responses > 0 else 0
+
+        yes_no_output.append(f"\nItem Code: {col}")
+        yes_no_output.append(f"Yes: {yes_percentage:.2f}% ({yes_count} responses)")
+        yes_no_output.append(f"No: {no_percentage:.2f}% ({no_count} responses)")
+
+# Save Yes/No analysis
+with open("yes_no_analysis.txt", "w") as file:
+    file.write("\n".join(yes_no_output))
+
+print("Yes/No analysis saved as 'yes_no_analysis.txt'.")
+
+# Categorical (Single-Select) Questions
+categorical_questions = ["IMP2"]  # Update if needed
+
+categorical_output = ["Categorical Question Analysis\n" + "="*40]
+
+for col in categorical_questions:
+    if col in df.columns:
+        category_counts = df[col].value_counts(normalize=True) * 100
+        categorical_output.append(f"\nItem Code: {col}")
+        categorical_output.append("Category Distribution:")
+        
+        for category, percentage in category_counts.items():
+            categorical_output.append(f"  {category}: {percentage:.2f}%")
+
+        most_selected = category_counts.idxmax()
+        least_selected = category_counts.idxmin()
+
+        categorical_output.append(f"Most Selected: {most_selected} ({category_counts[most_selected]:.2f}%)")
+        categorical_output.append(f"Least Selected: {least_selected} ({category_counts[least_selected]:.2f}%)")
+
+# Save categorical analysis
+with open("categorical_analysis.txt", "w") as file:
+    file.write("\n".join(categorical_output))
+
+print("Categorical analysis saved as 'categorical_analysis.txt'.")
