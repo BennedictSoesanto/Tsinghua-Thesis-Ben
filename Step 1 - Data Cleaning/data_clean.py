@@ -80,7 +80,7 @@ df = pd.read_csv('Cleaned Results2.csv')
 
 com1_options = [
     "Layanan penyuluhan dari pemerintah",
-    "Universitas atau lembaga pendidikan Pertanian",
+    "Universitas atau lembaga pendidikan pertanian",
     "Perusahaan atau konsultan swasta",
     "Sumber online (internet, media sosial)",
     "Petani lain",
@@ -93,7 +93,7 @@ out2_options = [
     "Infrastruktur internet atau listrik yang lebih baik",
     "Akses pelatihan dan pengetahuan yang lebih mudah",
     "Harga teknologi yang lebih terjangkau",
-    "Dukungan dari petani lain atau koperasi Pertanian"
+    "Dukungan dari petani lain atau koperasi pertanian"
 ]
 
 def create_binary_columns(df, column_name, options):
